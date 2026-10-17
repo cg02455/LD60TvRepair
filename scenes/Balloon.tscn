@@ -4,11 +4,13 @@
 [ext_resource type="Script" uid="uid://hisyeotivcuq" path="res://scripts/balloonGameManager.gd" id="1_6ukt2"]
 [ext_resource type="Texture2D" uid="uid://bbb6n8spen81k" path="res://icon.svg" id="1_lmd8b"]
 [ext_resource type="Script" uid="uid://bvkpsv16spiuv" path="res://scripts/balloonController.gd" id="3_egdey"]
+[ext_resource type="Texture2D" uid="uid://dqdnkoxbfkv7j" path="res://Assets/Sprites/Trampoline.png" id="3_typlv"]
 [ext_resource type="Script" uid="uid://crs7r5m7yro15" path="res://scenes/loseArea.gd" id="4_3r1ia"]
+[ext_resource type="Texture2D" uid="uid://dv2qkvlbaol6c" path="res://Assets/Sprites/Balloon.png" id="5_7gbql"]
 [ext_resource type="AudioStream" uid="uid://b853rxmrba7al" path="res://Assets/Audio/BalloonBounce.wav" id="5_opmx1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ym2wr"]
-size = Vector2(160, 36)
+size = Vector2(134, 34)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ym2wr"]
 radius = 15.132746
@@ -32,12 +34,12 @@ collision_mask = 8
 script = ExtResource("1_1nhty")
 
 [node name="Sprite2D" type="Sprite2D" parent="Catcher" unique_id=2114454312]
-position = Vector2(0, 148)
-scale = Vector2(1.25, 0.28125)
-texture = ExtResource("1_lmd8b")
+position = Vector2(0, 159)
+scale = Vector2(5.265, 5.265)
+texture = ExtResource("3_typlv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Catcher" unique_id=2066301706]
-position = Vector2(0, 148)
+position = Vector2(0, 159)
 shape = SubResource("RectangleShape2D_ym2wr")
 
 [node name="Balloon" type="CharacterBody2D" parent="." unique_id=1772982093]
@@ -47,8 +49,8 @@ collision_mask = 3
 script = ExtResource("3_egdey")
 
 [node name="Sprite2D" type="Sprite2D" parent="Balloon" unique_id=1422636263]
-scale = Vector2(0.234375, 0.234375)
-texture = ExtResource("1_lmd8b")
+scale = Vector2(3.459, 3.459)
+texture = ExtResource("5_7gbql")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Balloon" unique_id=1374339118]
 shape = SubResource("CircleShape2D_ym2wr")
